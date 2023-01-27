@@ -218,7 +218,7 @@ class MenuVC: UIViewController, UIGestureRecognizerDelegate {
         autoLayoutViewSeparator()
         autoLayoutForTitleStack()
         autoLayoutForBottomStack()
-        autoLayoutForCRLabel()
+//        autoLayoutForCRLabel()
     }
 
 
@@ -272,13 +272,13 @@ extension MenuVC {
     }
 
 
-    private func autoLayoutSegmentLanguage() {
-        contentView.addSubview(segmentLanguge)
-        
-        NSLayoutConstraint.activate([
-            segmentLanguge
-        ])
-    }
+//    private func autoLayoutSegmentLanguage() {
+//        contentView.addSubview(segmentLanguge)
+//
+//        NSLayoutConstraint.activate([
+//            segmentLanguge
+//        ])
+//    }
     
     private func autoLayoutForTitleStack() {
         contentView.addSubview(stkTitle)
@@ -304,18 +304,18 @@ extension MenuVC {
 
     }
 
-    private func autoLayoutForCRLabel() {
-        mainView.addSubview(lblCopyright)
-
-        NSLayoutConstraint.activate([
-
-
-            lblCopyright.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-            lblCopyright.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -27)
-
-        ])
-
-    }
+//    private func autoLayoutForCRLabel() {
+//        mainView.addSubview(lblCopyright)
+//
+//        NSLayoutConstraint.activate([
+//
+//
+//            lblCopyright.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//            lblCopyright.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -27)
+//
+//        ])
+//
+//    }
 
 
 

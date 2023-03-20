@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
     // Mark: - Constant and varibles
 
     // Mark: - Initialization
     lazy var nav: UINavigationController = {
+        
         let nav = UINavigationController()
         
         return nav
@@ -39,8 +40,6 @@ class ViewController: UIViewController {
         ScrollView.isScrollEnabled = true
 
         ScrollView.backgroundColor = .clear
-
-
 
         ScrollView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -111,6 +110,7 @@ class ViewController: UIViewController {
         txtEmail.textColor = .white
 
         txtEmail.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: txtEmail.frame.height))
+        
         txtEmail.leftViewMode = .always
 
         return txtEmail
@@ -136,6 +136,7 @@ class ViewController: UIViewController {
         txtPassword.textColor = .white
 
         txtPassword.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: txtPassword.frame.height))
+        
         txtPassword.leftViewMode = .always
 
 
@@ -253,27 +254,34 @@ class ViewController: UIViewController {
 
     // Mark: - View Controller Function
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         setupLayout()
 
     }
+    
+    
     //Mark: - Additional functions
                             
     @objc func didTapButton () {
+        
         let vc = SignUpVC()
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     @objc func didTapButtonLogin () {
-        let vc2 = LandingVC()
+        
+        let vc2 = LandingPageVC()
+        
         self.navigationController?.pushViewController(vc2, animated: true)
         
     }
 
 }
-extension ViewController {
+extension LoginVC {
 
    
     func setupLayout() {
@@ -351,6 +359,7 @@ extension ViewController {
         ])
     }
 
+    
     func autoLayoutForLabel() {
 
         mainView.addSubview(lblLogin)
@@ -358,7 +367,9 @@ extension ViewController {
         let safeLayout = mainView.layoutMarginsGuide
 
         NSLayoutConstraint.activate([
+            
             lblLogin.topAnchor.constraint(equalTo: safeLayout.topAnchor, constant: 96),
+            
             lblLogin.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor, constant: 27),
 
         ])

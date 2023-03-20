@@ -10,11 +10,15 @@ import UIKit
 class Registration2VC: UIViewController {
 
     lazy var imgBg2 : UIImageView = {
+        
         let imgBg2 = UIImageView()
         
         imgBg2.translatesAutoresizingMaskIntoConstraints = false
+        
         imgBg2.image = UIImage(named: "Background2")
+        
         imgBg2.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(imgBg2, at: 0)
         
         return imgBg2
@@ -285,9 +289,13 @@ extension Registration2VC{
     }
     
     func autoLayoutimgBg(){
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        
         backgroundImage.image = UIImage(named: "Background2")
+        
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(backgroundImage, at: 0)
         
 //        view.addSubview(imgBg)

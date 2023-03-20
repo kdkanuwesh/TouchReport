@@ -82,7 +82,7 @@ class LandingPageVC: UIViewController, ChartViewDelegate {
 
         imgLogo.clipsToBounds = true
 
-        imgLogo.image = UIImage(named: "police-badge")
+        imgLogo.image = UIImage(named: "IncidentIcon")
 
 
         return imgLogo
@@ -157,7 +157,7 @@ class LandingPageVC: UIViewController, ChartViewDelegate {
         
         pieChart.legend.textColor = .white
         
-        pieChart.legend.yEntrySpace = 8
+        pieChart.legend.yEntrySpace = 16
         
         pieChart.legend.form = .circle
 
@@ -166,6 +166,8 @@ class LandingPageVC: UIViewController, ChartViewDelegate {
         pieChart.drawEntryLabelsEnabled = false
 
         pieChart.holeRadiusPercent = 0
+        
+//        pieChart.legend.verticalAlignment = .bottom
 
         pieChart.transparentCircleColor = UIColor.clear
 
@@ -402,7 +404,7 @@ extension LandingPageVC {
 
             statisticsView.trailingAnchor.constraint(equalTo: landingView.trailingAnchor),
 
-            statisticsView.heightAnchor.constraint(equalToConstant: 488)
+            statisticsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
 
         ])
 
@@ -416,7 +418,7 @@ extension LandingPageVC {
 
         NSLayoutConstraint.activate([
 
-            stackView.topAnchor.constraint(equalTo: landingView.topAnchor, constant: 52),
+            stackView.topAnchor.constraint(equalTo: statisticsView.topAnchor, constant: 60),
 
             stackView.centerXAnchor.constraint(equalTo: statisticsView.centerXAnchor),
 
@@ -436,7 +438,7 @@ extension LandingPageVC {
 
         NSLayoutConstraint.activate([
 
-            lblStatistics.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 18),
+            lblStatistics.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
 
             lblStatistics.centerXAnchor.constraint(equalTo: landingView.centerXAnchor),
 
@@ -452,7 +454,7 @@ extension LandingPageVC {
 
         NSLayoutConstraint.activate([
 
-            pieView.topAnchor.constraint(equalTo: lblStatistics.topAnchor, constant: 18),
+            pieView.topAnchor.constraint(equalTo: lblStatistics.bottomAnchor, constant: 18),
 
             pieView.centerXAnchor.constraint(equalTo: statisticsView.centerXAnchor),
 

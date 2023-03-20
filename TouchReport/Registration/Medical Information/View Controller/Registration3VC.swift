@@ -10,11 +10,15 @@ import UIKit
 class Registration3VC: UIViewController {
 
     lazy var imgBg3 : UIImageView = {
+        
         let imgBg3 = UIImageView()
         
         imgBg3.translatesAutoresizingMaskIntoConstraints = false
+        
         imgBg3.image = UIImage(named: "Background2")
+        
         imgBg3.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(imgBg3, at: 0)
         
         return imgBg3
@@ -332,9 +336,13 @@ extension Registration3VC{
     }
     
     func autoLayoutimgBg(){
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        
         backgroundImage.image = UIImage(named: "Background2")
+        
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(backgroundImage, at: 0)
         
 //        view.addSubview(imgBg)
@@ -399,8 +407,11 @@ extension Registration3VC{
         NSLayoutConstraint.activate([
         
             lblRegistration3.topAnchor.constraint(equalTo: registration3View.topAnchor, constant: 135),
+            
           //  lblRegistration3.centerXAnchor.constraint(equalTo: registration3View.centerXAnchor)
+            
             lblRegistration3.leadingAnchor.constraint(equalTo: registration3View.leadingAnchor,constant: 27),
+            
             lblRegistration3.trailingAnchor.constraint(equalTo: registration3View.trailingAnchor,constant: -27)
             
         ])

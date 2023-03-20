@@ -12,11 +12,15 @@ class SignUpVC: UIViewController{
     
     
     lazy var imgBg : UIImageView = {
+        
         let imgBg = UIImageView()
         
         imgBg.translatesAutoresizingMaskIntoConstraints = false
+        
         imgBg.image = UIImage(named: "Background2")
+        
         imgBg.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(imgBg, at: 0)
         
         return imgBg
@@ -98,6 +102,7 @@ class SignUpVC: UIViewController{
         txtMailAddress.textColor = .white
 
         txtMailAddress.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: txtMailAddress.frame.height))
+        
         txtMailAddress.leftViewMode = .always
 
         return txtMailAddress
@@ -120,6 +125,7 @@ class SignUpVC: UIViewController{
         txtPhoneNo.textColor = .white
 
         txtPhoneNo.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: txtPhoneNo.frame.height))
+        
         txtPhoneNo.leftViewMode = .always
 
         return txtPhoneNo
@@ -201,8 +207,11 @@ class SignUpVC: UIViewController{
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         navigationController?.navigationBar.isHidden = true
+        
         signUPsetupLayout()
         
         
@@ -212,14 +221,13 @@ class SignUpVC: UIViewController{
     }
     
     @objc func didTapButton () {
+        
         let vc = Registration2VC()
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
-
     }
 
-    
-    
 }
 extension SignUpVC{
     
@@ -241,9 +249,13 @@ extension SignUpVC{
     }
     
     func autoLayoutimgBg(){
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        
         backgroundImage.image = UIImage(named: "Background2")
+        
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        
         self.view.insertSubview(backgroundImage, at: 0)
         
 //        view.addSubview(imgBg)
@@ -308,6 +320,7 @@ extension SignUpVC{
         NSLayoutConstraint.activate([
         
             lblRegistration.topAnchor.constraint(equalTo: signUpView.topAnchor, constant: 145),
+            
             lblRegistration.centerXAnchor.constraint(equalTo: signUpView.centerXAnchor)
             
         ])
